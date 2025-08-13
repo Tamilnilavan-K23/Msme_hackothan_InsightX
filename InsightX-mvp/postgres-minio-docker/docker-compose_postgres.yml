@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+     db:
+       image: postgres
+       environment:
+            POSTGRES_PASSWORD: Msme232005
+       
+     pgadmin:
+         image: dpage/pgadmin4
+         environment:
+               PGADMIN_DEFAULT_EMAIL:tamilnilavan@student.tce.edu
+               PDADMIN_DEFAULT_PASSWORD:Msme232005

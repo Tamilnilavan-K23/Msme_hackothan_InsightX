@@ -1,0 +1,26 @@
+# PostgreSQL connection
+psycopg2-binary==2.9.9   # For connecting to PostgreSQL
+sqlalchemy==2.0.29       # ORM for easier DB handling
+
+# MinIO / S3 operations
+minio==7.2.7             # MinIO Python SDK for file operations
+
+# Data processing (optional but useful)
+pandas==2.2.2
+numpy==1.26.4
+
+# Environment variables
+python-dotenv==1.0.1     # For loading environment variables from .env file
+
+# Async support (optional for high-performance projects)
+asyncpg==0.29.0
+
+# Logging and utilities
+loguru==0.7.2
+
+# Jupyter (only if you want notebooks for testing)
+jupyterlab==4.2.4
+
+psycopg2-binary sqlalchemy minio
+
+python-dotenv

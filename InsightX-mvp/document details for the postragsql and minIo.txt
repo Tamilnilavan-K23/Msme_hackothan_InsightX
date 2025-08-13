@@ -1,0 +1,43 @@
+names-postgres_db
+PORTS -0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
+
+image: postgres:15
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: mydb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+
+
+RABBITMQ_USER=rabbituser
+RABBITMQ_PASSWORD=rabbitpass
+
+DATABASE_URL=postgresql://insightx:insightxpass@postgres:5432/insightx
+MINIO_ENDPOINT=minio:9000
+MINIO_ACCESS_KEY=minioadmin
+MINIO_SECRET_KEY=minioadmin
+RABBITMQ_BROKER_URL=amqp://guest:guest@rabbitmq:5672//
+REDIS_URL=redis://redis:6379/0
+JWT_SECRET=replace_this_with_long_secret
+
+
+
+docker run  -d -p 5432:5432 -v  -- name postresql_1 -e
+POSTGRES_PASSWORD=db_pswrd postgres
+
+docker run -d -e POSTGRES_PASSWORD=db_pswrd  --name postresql_1 postgres
+
+docker run --rm -d -p 5432:5432  -e POSTGRES_PASSWORD=db_pswrd  --name postresql_1 -v "C:/dbFolders\db1":/var/lib/postresql/data postgres
+
+
+
+
+
+correct format-docker run --rm -d -p 5432:5432 -e POSTGRES_PASSWORD=db_pswrd --name postgresql_1 -v "C:/dbFolders/db1":/var/lib/postgresql/data postgres
+
